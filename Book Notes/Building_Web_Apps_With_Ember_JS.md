@@ -260,6 +260,11 @@
 * Use `get()` and `set()` whenever possible
 	* It makes sure you get the latest value of a variable, and set notifies variables watching the set variable of changes
 * Routes can pass data into the static Handlebars templates
+* An __ObjectController__ is a controller to work with a single object
+	* Controller can communicate with the model
+	* If ObjectController `gets` or `sets` a property, it will pass this onto the model 
+* An __ArrayController__ 
+	* Can use `this.set('sortProperties', ['property']);` to sort by a property
 * __Views__
 	* Views allow for more custom widgets within a template
 	* A more complex "computed property"
@@ -286,6 +291,15 @@
 	* For object members, use `DS.attr('string');` or `DS.attr('number');`
 * Fixtures are a way to put sample data into an application before connecting the application to long-term persistence
 * To go over actions again: `<a {{action 'viewedArtist' this }}>{{name}}</a>`
+
+<h3>Ember Data (from Team Treehouse "Intro to Ember JS" course</h3>
+* Put Ember Data and Local Storage adapter in the _libs_ folder and link in "index.html"
+* Always use a non-plural name for models in Data
+* Need a LocalStorage adapter
+* `DS` stands for `DataStore`, or EmberData
+* `Project.BlogPost = DS.Model.extend({ title: DS.attr() });`
+* `this.store.find('modelName');` will get all instances of the model `modelName`
+* `this.store.find('modelName', params.prop_name);`, you can look for a specific instance
 
 
 <h3>Misc.</h3>
