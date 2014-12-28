@@ -194,6 +194,7 @@
 
 	* Wildcards are also possible, and "masking" of routes:
 		* `this.route('search-results', { path: 'search/:term' });`
+		* This will allow `params` to be passed into the model function in the router, and then accessed within the model by `params.term`
 * __Models__
 	* Unlike controllers & views, models are necessarily nestled with one particular view
 	* The model allows for de-serialization of the URL into model/state data
@@ -285,6 +286,12 @@
 	* For object members, use `DS.attr('string');` or `DS.attr('number');`
 * Fixtures are a way to put sample data into an application before connecting the application to long-term persistence
 * To go over actions again: `<a {{action 'viewedArtist' this }}>{{name}}</a>`
+
+
+<h3>Misc.</h3>
+* Ember adds several additional methods on objects
+	* `findBy(property, value);` // Looks through array for an object's property that matches that value
+
 
 
 
