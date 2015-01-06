@@ -301,6 +301,13 @@
 * `this.store.find('modelName');` will get all instances of the model `modelName`
 * `this.store.find('modelName', params.prop_name);`, you can look for a specific instance
 
+<h4>Relationships in Ember</h4>
+* In a model, `DS.hasMany("otherModelName", {async: true})` indicates a collection of children otherModelName models
+	* Conversly, in children models, they can have a property: `parent: DS.belongsTo('parentModelName', {async: true});`
+* If a child needs access to a parent, we put a `needs` field in the controller, which consists of an array with each controller needed for this model
+	* We can, for example, then access the model like: `var post = this.get('controllers.post.model')`, and then interact with that specific model
+
+
 
 <h3>Misc.</h3>
 * Ember adds several additional methods on objects
