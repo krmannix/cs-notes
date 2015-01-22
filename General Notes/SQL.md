@@ -47,7 +47,7 @@
 	* `SELECT COUNT(*) AS review_count FROM movies WHERE year = 1993;` _Counts number of rows that have a year equal to 1993
 	* Also have MIN(column), MAX(column), SUM(column), AVG(column)
 	* Operations as well - +, /, -
-	* 'SELECT COUNT(*) FROM movies GROUP BY movie_id;'
+	* `SELECT COUNT(*) FROM movies GROUP BY movie_id;`
 	* With joining:
 		'SELECT COUNT(*) FROM movies LEFT OUT JOIN reviews ON movies.id = reviews.movie_id GROUP BY movie_id;`
 	* If NULL:
